@@ -9,31 +9,18 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-import os, json
-from django.core.exceptions import ImproperlyConfigured
+# import os, json
+# from django.core.exceptions import ImproperlyConfigured
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-secret_file = os.path.join(BASE_DIR, 'secrets.json')
-
-with open(secret_file) as f:
-    secrets = json.loads(f.read())
-
-def get_secret(setting, secrets=secrets):
-    try:
-        print("check: ", secrets[setting])
-        return secrets[setting]
-    except KeyError:
-        error_msg = "Set the {} environment variable".format(setting)
-        raise ImproperlyConfigured(error_msg)
-
-SECRET_KEY = get_secret("SECRET_KEY")
+SECRET_KEY = 'django-insecure-h-p5)z)32^*r*+4-i%u5kv1a6b3he@qb_3yrbx-$%u47*&$xm+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,13 +119,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/mysite/static/' # mysite 적용해주기
+STATIC_URL = '/static/' # mysite 적용해주기 경로
 
 STATICFILES_DIRS = [
 
     #  os.path.join(BASE_DIR,'static'),
     # 'mysite/static/',
-    BASE_DIR / "static",
+    BASE_DIR / 'static',
     # '/mysite/static/',
 ]
 
