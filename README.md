@@ -14,3 +14,6 @@ python manage.py runserver 0:8000 --settings=config.settings.prod
 ### 가상환경 자동화 파일 생성 (nano 에디터 통해 생성)
 cd venvs
 . mysite.sh
+
+### Gunicorn
+### Ngnix
