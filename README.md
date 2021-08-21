@@ -16,5 +16,6 @@ cd venvs
 . mysite.sh
 
 ### AWS lightsail
+### MobaXterm
 ### Gunicorn
 ### Ngnix
