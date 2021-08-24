@@ -15,6 +15,7 @@ python manage.py runserver 0:8000 --settings=config.settings.prod
 cd venvs
 . mysite.sh
 
+### AWS
 ### AWS lightsail
 ### MobaXterm
 ### Gunicorn
