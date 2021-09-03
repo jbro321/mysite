@@ -20,3 +20,5 @@ cd venvs
 ### MobaXterm
 ### Gunicorn
 ### Ngnix
+
+### 다시시작!
